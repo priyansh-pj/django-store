@@ -1,0 +1,11 @@
+{% extends 'header.html' %}
+{% block content %}
+    <h3>Items List</h3>
+    <ul>
+{% for items in data %}
+    <li><strong>{{ items.name }} (Quantity - {{ items.quantity }})</strong> - {{ items.description }}  -- <a href="{% url "checkout" items.id %}">BUY</a></li>
+{% endfor %}
+    </ul>
+
+
+{% endblock %}

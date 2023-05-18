@@ -1,0 +1,10 @@
+{% extends "header.html" %}
+{% block content %}
+    <h3>Category List</h3>
+    <ul>
+    {% for items in data %}
+        <li><strong><a href="{% url "items" items.id%}">{{ items.name }} </a></strong> - {{ items.description }}</li>
+    {% endfor %}
+    </ul>
+
+{% endblock %}
